@@ -15,3 +15,5 @@ const NewText = () => {
 };
 
 export default NewText;
+
+// 새 글 쓰기 페이지 렌더링
