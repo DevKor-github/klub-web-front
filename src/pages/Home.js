@@ -9,3 +9,5 @@ const Home = () => {
 };
 
 export default Home;
+
+//메인페이지 렌더링

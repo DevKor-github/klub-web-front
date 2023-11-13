@@ -1,5 +1,5 @@
+import React from 'react';
 import styled from "styled-components";
-// import { useDispatch } from "react-redux";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -25,12 +25,13 @@ const Button = styled.button`
   margin: 5px 0;
 `;
 
+
 const LogIn = () => {
   return (
     <StyledDiv>
       <FormDiv>
-        <Input type="email" placeholder="이메일" />
-        <Input type="password" placeholder="비밀번호" />
+        <Input type="email" placeholder="이메일"  />
+        <Input type="password" placeholder="비밀번호"  />
         <Button>
           로그인
         </Button>
@@ -40,3 +41,5 @@ const LogIn = () => {
 };
 
 export default LogIn;
+
+// 로그인 페이지 렌더링

@@ -1,6 +1,10 @@
 import styled from "styled-components";
+// js 파일 안에서 css를 처리
 import { NavLink } from "react-router-dom";
+// NavLink: 사용자가 클릭할 수 있는 링크 생성
 import { Outlet } from "react-router-dom";
+// Outlet: 부모 라우트에서 중첩될 자식들이 렌더링될 위치
+// App.js 참고 -> Head 컴포넌트(부모) - Home, NewText 컴포넌트(자식)
 
 const HeadBlock = styled.div`
   display: flex;
@@ -58,7 +62,7 @@ const Login = styled(NavLink)`
     color: rgb(134, 38, 51);
   }
 `;
-
+// 여기까지가 style에 대한 부분! 
 
 const Head = () => {
   return(
