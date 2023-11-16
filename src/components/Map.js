@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
 const { kakao } = window;
+
+const MapContainer = styled.div`
+  margin: 0 auto; /* 수평 가운데 정렬을 위한 스타일 */
+  width: 1180px; /* 컨테이너의 너비를 지정 */
+`;
 
 const Map = () => {
 
@@ -19,9 +25,12 @@ const Map = () => {
     // 한번만 랜더링
 
     return (
+      <MapContainer>
         <div id='myMap' style={{
-            height: '350px'
+            height: '350px',
+            width: '1180px'
         }}></div>
+      </MapContainer>
     );
 }
 
