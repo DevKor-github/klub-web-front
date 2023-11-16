@@ -1,0 +1,12 @@
+/* Banner.css */
+
+.banner {
+  width: 150px; /* Width of the banner */
+  height: 75px; /* Height of the banner */
+  background-color: #3498db; /* Background color */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Padding inside the banner */
+  margin: 10px; /* Margin between banners */
+  text-align: center; /* Center text */
+  color: #fff; /* Text color */
+}
