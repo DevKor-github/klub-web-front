@@ -1,4 +1,15 @@
 import styled from "styled-components";
+import { createGlobalStyle } from "styled-components";
+import { useState } from "react";
+
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    overflow: hidden;
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+  }
+`;
 
 const Background = styled.div`
   height: 100vh;
@@ -21,7 +32,7 @@ const Title = styled.h1`
   margin: 20px auto;
 `
 
-const Box = styled.div`
+const Box = styled.form`
   width: 300px;
   padding: 20px;
   padding-top: 0;
@@ -83,19 +94,46 @@ const Button = styled.button`
 `
 
 const Register = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [checkPw, setCheckPw] = useState('');
+  const [name, setName] = useState('');
+
+  const RegisterFunc = (e) => {
+    e.preventDefault();
+    if (!email) {
+      return alert('이메일을 입력해주세요.')
+    } 
+    else if (!password) {
+      return alert('비밀번호를 입력해주세요.')
+    }
+    else if (!checkPw) {
+      return alert('비밀번호를 확인해주세요.')
+    }
+    else if (!name) {
+      return alert('닉네임을 입력해주세요.')
+    }
+    else if (password !== checkPw) {
+      return alert('비밀번호를 다시 확인해주세요.')
+    }
+  }
+
   return (
-    <Background>
-      <Container>
-        <Title>회원가입</Title>
-        <Box>
-          <Email type='email' placeholder='(학교) 이메일*'/>
-          <Password type='password' placeholder='비밀번호*'/>
-          <Password type='password' placeholder='비밀번호 확인*'/>
-          <Name type='text' placeholder='닉네임*'/>
-          <Button>회원가입</Button>
-        </Box>
-      </Container>
-    </Background>
+    <>
+      <GlobalStyle />
+      <Background>
+        <Container>
+          <Title>회원가입</Title>
+          <Box onSubmit={RegisterFunc}>
+            <Email type='email' placeholder='(학교) 이메일*' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <Password type='password' placeholder='비밀번호*' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <Password type='password' placeholder='비밀번호 확인*' value={checkPw} onChange={(e) => setCheckPw(e.target.value)} />
+            <Name type='text' placeholder='닉네임*' value={name} onChange={(e) => setName(e.target.value)}/>
+            <Button type="submit">회원가입</Button>
+          </Box>
+        </Container>
+      </Background>
+    </>
   )
 }
 

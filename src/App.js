@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import axios from 'axios'
+
 import Head from './components/Head.js';
 import Home from './pages/Home.js';
 import NewText from './pages/NewText.js';
 import LogIn from './pages/LogIn.js';
 import Register from './pages/Register.js'
+import MyPosts from './pages/MyPosts.js';
 
 // 라우팅 구조 정의
 const App = () => {
@@ -14,7 +17,7 @@ const App = () => {
           <Route index element={<Home />} /> 
           <Route path='newtext' element={<NewText />} />
           <Route path='register' element={<Register />} />
-
+          <Route path='myposts' element={<MyPosts />} />
         </Route>
         <Route path='login' element={<LogIn />} />
       </Routes>

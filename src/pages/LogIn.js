@@ -1,6 +1,6 @@
-import React from 'react';
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const Background = styled.div`
   height: 100vh;
@@ -20,7 +20,7 @@ const Welcome = styled.h1`
   font-size: 40px; 
 `
 
-const Box = styled.div`
+const Form = styled.form`
   width: 300px;
   padding: 20px;
   padding-top: 0;
@@ -38,7 +38,6 @@ const Email = styled.input`
   margin: 5px;
   font-size: 16px;
 `
-
 const Password = styled.input`
   height: 30px;
   border: 1px solid #ccc;
@@ -83,19 +82,31 @@ const Register = styled(NavLink)`
     color: black;
   }
 `
-
 const LogIn = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const LoginFunc = (e) => {
+    e.preventDefault();
+    if (!email) {
+      return alert('이메일을 입력해주세요.')
+    } 
+    else if (!password) {
+      return alert('비밀번호를 입력해주세요.')
+    }
+  }
+
   return (
     <Background>
       <Container>
         <Welcome>로스트KU에 오신 것을 환영합니다!</Welcome>
-        <Box>
-          <Email type='email' placeholder='(학교) 이메일'/>
-          <Password type='password' placeholder='비밀번호'/>   
+        <Form onSubmit={LoginFunc}>
+          <Email type='email' placeholder='(학교) 이메일' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <Password type='password' placeholder='비밀번호' value={password} onChange={(e) => setPassword(e.target.value)} /> 
           <Find>*비밀번호 찾기</Find>
-          <Button>로그인</Button>
+          <Button type="submit">로그인</Button>
           <Register to='/register'>회원가입</Register>
-        </Box>
+        </Form>
       </Container>
     </Background>
   );
