@@ -21,7 +21,7 @@ const HeadBlock = styled.div`
 
 const LostKU = styled(NavLink)`
   font-size: 2rem;
-  font-weight: 900;
+  font-family: 'Pretendard-Bold', sans-serif;
   cursor: pointer;
   white-space: pure;
   text-decoration: none;

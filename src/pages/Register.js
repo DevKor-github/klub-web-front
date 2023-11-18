@@ -1,6 +1,4 @@
-import React from 'react';
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
 
 const Background = styled.div`
   height: 100vh;
@@ -14,10 +12,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
+  margin-top: -150px;
 `
 
-const Welcome = styled.h1`
+const Title = styled.h1`
   font-size: 40px; 
+  margin: 20px auto;
 `
 
 const Box = styled.div`
@@ -26,40 +27,48 @@ const Box = styled.div`
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  align-items: center;
 `
-
 const Email = styled.input`
-  height: 30px;
+  width: 100%;
+  height: 40px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 5px;
-  padding-left: 10px;
-  margin: 5px;
+  padding: 10px;
+  margin: 10px 0;
   font-size: 16px;
+  box-sizing: border-box;
 `
 
 const Password = styled.input`
-  height: 30px;
+  width: 100%;
+  height: 40px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 5px;
-  padding-left: 10px;
-  margin: 5px;
+  padding: 10px;
+  margin: 10px 0;
   font-size: 16px;
+  box-sizing: border-box;
 `
 
-const Find = styled.p`
-  color: #909090;
-  margin: 5px 5px;
+const Name = styled.input`
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  box-sizing: border-box;
 `
 
 const Button = styled.button`
+  width: 300px;
   height: 40px;
   border: none;
   border-radius: 10px;
   padding: 5px;
-  margin: 5px;
+  margin: 10px 0;
   font-size: 16px;
   text-align: center;
   background-color: rgb(134, 38, 51);
@@ -73,34 +82,21 @@ const Button = styled.button`
   }
 `
 
-const Register = styled(NavLink)`
-  color: rgb(134, 38, 51);
-  text-decoration: none;
-  margin: 10px;
-  text-align: center;
-
-  &:hover {
-    color: black;
-  }
-`
-
-const LogIn = () => {
+const Register = () => {
   return (
     <Background>
       <Container>
-        <Welcome>로스트KU에 오신 것을 환영합니다!</Welcome>
+        <Title>회원가입</Title>
         <Box>
-          <Email type='email' placeholder='(학교) 이메일'/>
-          <Password type='password' placeholder='비밀번호'/>   
-          <Find>*비밀번호 찾기</Find>
-          <Button>로그인</Button>
-          <Register to='/register'>회원가입</Register>
+          <Email type='email' placeholder='(학교) 이메일*'/>
+          <Password type='password' placeholder='비밀번호*'/>
+          <Password type='password' placeholder='비밀번호 확인*'/>
+          <Name type='text' placeholder='닉네임*'/>
+          <Button>회원가입</Button>
         </Box>
       </Container>
     </Background>
-  );
-};
+  )
+}
 
-export default LogIn;
-
-// 로그인 페이지 렌더링
+export default Register;
