@@ -1,4 +1,4 @@
-/* BoardWrite.js */
+/* BoardWrite.js 새 글쓰기 페이지 */ 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
