@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Head from './Head'; // Import your Head component
-import Map from './Map'; // Import your Map component
-import Banner from './Banner'; // Import your Banner component
+import Head from './Head.js'; // Import your Head component
+import Map from './Map.js'; // Import your Map component
+import Banner from './Banner.js'; // Import your Banner component
 
 const Main = () => {
   return (
