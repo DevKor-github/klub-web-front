@@ -1,0 +1,33 @@
+/* BoardWrite.module.css */
+.container {
+  font-family: 'Your Desired Font', sans-serif;
+  max-width: 600px;
+  margin: auto;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button {
+  padding: 10px;
+  margin-right: 10px;
+}
