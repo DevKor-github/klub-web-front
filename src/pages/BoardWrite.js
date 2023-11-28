@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import styles from './BoardWrite.module.css'; // Import the CSS module
 
 const BoardWrite = () => {
   const navigate = useNavigate();
@@ -10,10 +11,10 @@ const BoardWrite = () => {
     title: '',
     createdBy: '',
     contents: '',
-    location: '', // Add the location field
+    location: '',
   });
 
-  const { title, createdBy, contents, location } = board; // Update destructuring
+  const { title, createdBy, contents, location } = board;
 
   const onChange = (event) => {
     const { value, name } = event.target;
@@ -35,49 +36,63 @@ const BoardWrite = () => {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div>
-        <span>제목</span>
-        <input type="text" name="title" value={title} onChange={onChange} />
+        <label className={styles.label}>제목</label>
+        <input
+          type="text"
+          name="title"
+          value={title}
+          onChange={onChange}
+          className={styles.input}
+        />
       </div>
       <br />
       <div>
-        <span>습득위치</span>
+        <label className={styles.label}>습득위치</label>
         <input
           type="text"
           name="createdBy"
           value={createdBy}
           onChange={onChange}
+          className={styles.input}
         />
       </div>
       <br />
       <div>
-        <span>놓아둔 장소</span> {/* Add the location input */}
+        <label className={styles.label}>놓아둔 장소</label>
         <input
           type="text"
           name="location"
           value={location}
           onChange={onChange}
+          className={styles.input}
         />
       </div>
       <br />
       <div>
-        <span>내용</span>
+        <label className={styles.label}>내용</label>
         <textarea
           name="contents"
           cols="30"
           rows="10"
           value={contents}
           onChange={onChange}
+          className={styles.textarea}
         ></textarea>
       </div>
       <br />
-      <div>
-        <button onClick={saveBoard}>저장</button>
-        <button onClick={backToList}>취소</button>
+      <div className={styles.button-container}>
+        <button onClick={saveBoard} className={styles.button}>
+          저장
+        </button>
+        <button onClick={backToList} className={styles.button}>
+          취소
+        </button>
       </div>
     </div>
   );
 };
 
 export default BoardWrite;
+
