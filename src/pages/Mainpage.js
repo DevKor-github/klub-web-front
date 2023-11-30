@@ -1,10 +1,10 @@
-// Main.js
+// Mainpage.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Head from './Head'; 
-import Map from './Map'; 
-import LostColumn from './LostColumn'; // '물건 찾아요'열
-import FoundColumn from './FoundColumn'; // '주인 찾아요'열
+import Head from '../components/Head.js'; 
+import Map from '../components/Map.js'; 
+import LostColumn from '../components/LostColumn.js'; // '물건 찾아요'열
+import FoundColumn from '../components/FoundColumn.js'; // '주인 찾아요'열
 
 const Main = () => {
   return (
