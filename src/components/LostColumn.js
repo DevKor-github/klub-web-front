@@ -5,8 +5,8 @@ import Banner from '../components/Banner.js';
 const LostColumn = () => {
   // Sample data, replace with actual data from your backend or state
   const lostItems = [
-    { id: 1, image: '../images/lost_image_1.jpg', title: 'Lost Item 1' },
-    { id: 2, image: '../images/lost_image_2.jpg', title: 'Lost Item 2' },
+    { id: 1, image: '../lost_image_1.jpg', title: 'Lost Item 1' },
+    { id: 2, image: '../lost_image_2.jpg', title: 'Lost Item 2' },
     // Add more items as needed
   ];
 
