@@ -5,8 +5,8 @@ import Banner from './Banner.js';
 const FoundColumn = () => {
   // Sample data, replace with actual data from your backend or state
   const foundItems = [
-    { id: 1, image: 'found_image_1.jpg', title: 'Found Item 1' },
-    { id: 2, image: 'found_image_2.jpg', title: 'Found Item 2' },
+    { id: 1, image: '../found_image_1.jpg', title: 'Found Item 1' },
+    { id: 2, image: '../found_image_2.jpg', title: 'Found Item 2' },
     // Add more items as needed
   ];
 
