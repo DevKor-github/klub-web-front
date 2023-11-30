@@ -1,6 +1,6 @@
 // LostColumn.js
 import React from 'react';
-import Banner from './Banner.js'; 
+import Banner from '../components/Banner.js'; 
 
 const LostColumn = () => {
   // Sample data, replace with actual data from your backend or state
