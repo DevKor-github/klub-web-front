@@ -6,15 +6,16 @@ const StyledBanner = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.2rem;
+  padding: 20px;
   width: 300px; // Adjust the width as needed
-  margin: 0 10px; // Add margin between banners
+  margin: 10px; // Add margin between banners
   justify-content: space-between;
 
   img {
     width: 100%;
     height: auto;
     border-radius: 8px; // Add rounded corners to images
+    margin-bottom: 10px;
   }
 
   h2 {
