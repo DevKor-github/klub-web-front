@@ -14,7 +14,7 @@ const StyledBanner = styled.div`
   img {
     width: 100%;
     height: auto;
-    border-radius: 8px; // Optional: Add rounded corners to images
+    border-radius: 8px; // Add rounded corners to images
   }
 
   h2 {
