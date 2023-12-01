@@ -44,6 +44,10 @@ export default TitleComponent;
 
 
 //연락 방법 체크란
+const FontSize = styled.div`
+  font-size: 16px;
+`;
+
 const Contact = () => {
   const [RadioValue, setRadioValue] = useState('');
   const radioarr = [
@@ -58,21 +62,24 @@ const Contact = () => {
   };
 
   return (
-    <div className="Radio">
-      <p>연락 방법</p>
-      {radioarr.map((section) => (
-        <div className="radio_button" key={section.value}>
-          <input
-            type="radio"
-            value={section.label}
-            onChange={handleRadio}
-            checked={RadioValue === section.label}
-          />
-          <label className="label">{section.label}</label>
-        </div>
-      ))}
-    </div>
+    <FontSize>
+      <div className="Radio">
+        <p>연락 방법</p>
+        {radioarr.map((section) => (
+          <div className="radio_button" key={section.value}>
+            <input
+              type="radio"
+              value={section.label}
+              onChange={handleRadio}
+              checked={RadioValue === section.label}
+            />
+            <label>{section.label}</label>
+          </div>
+        ))}
+      </div>
+    </FontSize>
   );
 };
 
 export default Contact;
+
