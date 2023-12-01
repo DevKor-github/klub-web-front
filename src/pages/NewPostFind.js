@@ -107,14 +107,14 @@ export default Contact;
 
 
 import React from 'react';
-import TitleComponent from './TitleComponent'; // Adjust the path as needed
-import Contact from './Contact'; // Adjust the path as needed
+import TitleComponent from './TitleComponent'; 
+import Contact from './Contact'; 
 
 const Container = styled.div`
-  margin-bottom: 40px; /* Adjust the margin as needed */
+  margin-bottom: 40px;
 `;
 
-const YourParentComponent = () => {
+const ParentComponent = () => {
   return (
     <Container>
       <TitleComponent />
@@ -123,6 +123,6 @@ const YourParentComponent = () => {
   );
 }
 
-export default YourParentComponent;
+export default ParentComponent;
 
 
