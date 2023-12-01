@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+export const SharedLabelStyle = styled.label`
+  font-size: 20px;
+  /* Add any other shared styles if needed */
+`;
+
 // 제목 입력란
 const TitleContainer = styled.div`
   display: flex;
@@ -44,8 +49,24 @@ export default TitleComponent;
 
 
 //연락 방법 체크란
-const FontSize = styled.div`
-  font-size: 16px;
+import React, { useState } from 'react';
+import styled from 'styled-components';
+
+const Container2 = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+`;
+
+const Label2 = styled.p`
+  margin-left: 5px;
+  margin-right: 15px;
+  white-space: nowrap;
+  font-size: 20px; /* Adjust font size as needed */
+`;
+
+const RadioContainer = styled.div`
+  /* Add any additional styling for the radio container */
 `;
 
 const Contact = () => {
@@ -62,9 +83,9 @@ const Contact = () => {
   };
 
   return (
-    <FontSize>
-      <div className="Radio">
-        <p>연락 방법</p>
+    <Container2>
+      <Label2>연락 방법</Label2>
+      <RadioContainer className="Radio">
         {radioarr.map((section) => (
           <div className="radio_button" key={section.value}>
             <input
@@ -73,13 +94,35 @@ const Contact = () => {
               onChange={handleRadio}
               checked={RadioValue === section.label}
             />
-            <label>{section.label}</label>
+            <SharedLabelStyle>{section.label}</SharedLabelStyle>
           </div>
         ))}
-      </div>
-    </FontSize>
+      </RadioContainer>
+    </Container2>
   );
 };
 
 export default Contact;
+
+
+
+import React from 'react';
+import TitleComponent from './TitleComponent'; // Adjust the path as needed
+import Contact from './Contact'; // Adjust the path as needed
+
+const Container = styled.div`
+  margin-bottom: 40px; /* Adjust the margin as needed */
+`;
+
+const YourParentComponent = () => {
+  return (
+    <Container>
+      <TitleComponent />
+      <Contact />
+    </Container>
+  );
+}
+
+export default YourParentComponent;
+
 
