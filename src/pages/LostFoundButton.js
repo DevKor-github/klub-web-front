@@ -46,3 +46,17 @@ function LostFoundButton() {
 }
 
 export default LostFoundButton;
+
+import Head from '../components/Head.js'; 
+import LostFoundButton from './LostFoundButton'; 
+
+const LostFoundButtonMerged = () => {
+  return (
+    <div>
+      <Head />
+      <LostFoundButton />
+    </div>
+  );
+};
+
+export default LostFoundButtonMerged;
