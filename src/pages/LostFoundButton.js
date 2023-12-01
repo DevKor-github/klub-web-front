@@ -1,6 +1,8 @@
-// lostfoundbutton.js
+//물건 찾아요, 주인 찾아요 버튼 나오는 페이지
+
 import React from 'react';
 import styled from 'styled-components';
+import Head from '../components/Head.js';
 
 const StyledDiv = styled.div`
   display: flex;
@@ -36,6 +38,7 @@ function LostFoundButton() {
   return (
     <div className="App">
       <StyledDiv>
+        <Head />
         <ButtonContainer>
           <BigButton>물건 찾아요</BigButton>
           <BigButton>주인 찾아요</BigButton>
@@ -47,16 +50,3 @@ function LostFoundButton() {
 
 export default LostFoundButton;
 
-import Head from '../components/Head.js'; 
-import LostFoundButton from './LostFoundButton'; 
-
-const LostFoundButtonMerged = () => {
-  return (
-    <div>
-      <Head />
-      <LostFoundButton />
-    </div>
-  );
-};
-
-export default LostFoundButtonMerged;
