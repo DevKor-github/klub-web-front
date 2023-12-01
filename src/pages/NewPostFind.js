@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
 // 제목 입력란
 const TitleContainer = styled.div`
