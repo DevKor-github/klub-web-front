@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const SharedLabelStyle = styled.label`
   font-size: 20px;
-  /* Add any other shared styles if needed */
 `;
 
 // 제목 입력란
@@ -62,11 +61,10 @@ const Label2 = styled.p`
   margin-left: 5px;
   margin-right: 15px;
   white-space: nowrap;
-  font-size: 20px; /* Adjust font size as needed */
+  font-size: 20px; 
 `;
 
 const RadioContainer = styled.div`
-  /* Add any additional styling for the radio container */
 `;
 
 const Contact = () => {
@@ -75,7 +73,6 @@ const Contact = () => {
     { value: 1, label: '위탁 장소에 문의' },
     { value: 2, label: '오픈 채팅방' },
     { value: 3, label: '기타' },
-    // Add more options as needed
   ];
 
   const handleRadio = (event) => {
