@@ -1,3 +1,5 @@
+//새글 쓰기 "주인 찾아요"
+
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
